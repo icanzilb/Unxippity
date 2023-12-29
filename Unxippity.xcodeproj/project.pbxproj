@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9C21884A2AFEB5F3000398A6 /* UnxipittyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2188492AFEB5F3000398A6 /* UnxipittyModel.swift */; };
 		9C21884C2AFEB68C000398A6 /* FileUtilitites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21884B2AFEB68C000398A6 /* FileUtilitites.swift */; };
 		9C21884E2AFEB781000398A6 /* IconPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21884D2AFEB781000398A6 /* IconPreview.swift */; };
-		9C3986842AFDFA1400ECC52C /* libunxip in Frameworks */ = {isa = PBXBuildFile; productRef = 9C3986832AFDFA1400ECC52C /* libunxip */; };
+		9C3466702B3EFE40004ABD14 /* libunxip in Frameworks */ = {isa = PBXBuildFile; productRef = 9C34666F2B3EFE40004ABD14 /* libunxip */; };
 		9C8503922AFDF46C003E5DD5 /* UnxippityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8503912AFDF46C003E5DD5 /* UnxippityApp.swift */; };
 		9C8503942AFDF46C003E5DD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8503932AFDF46C003E5DD5 /* ContentView.swift */; };
 		9C8503962AFDF46D003E5DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C8503952AFDF46D003E5DD5 /* Assets.xcassets */; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C3986842AFDFA1400ECC52C /* libunxip in Frameworks */,
+				9C3466702B3EFE40004ABD14 /* libunxip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +157,7 @@
 			);
 			name = Unxippity;
 			packageProductDependencies = (
-				9C3986832AFDFA1400ECC52C /* libunxip */,
+				9C34666F2B3EFE40004ABD14 /* libunxip */,
 			);
 			productName = Unxippity;
 			productReference = 9C85038E2AFDF46C003E5DD5 /* Unxippity.app */;
@@ -188,7 +188,7 @@
 			);
 			mainGroup = 9C8503852AFDF46C003E5DD5;
 			packageReferences = (
-				9C3986822AFDFA1400ECC52C /* XCRemoteSwiftPackageReference "unxip" */,
+				9C34666E2B3EFE40004ABD14 /* XCLocalSwiftPackageReference "unxip" */,
 			);
 			productRefGroup = 9C85038F2AFDF46C003E5DD5 /* Products */;
 			projectDirPath = "";
@@ -443,21 +443,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		9C3986822AFDFA1400ECC52C /* XCRemoteSwiftPackageReference "unxip" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/saagarjha/unxip";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		9C34666E2B3EFE40004ABD14 /* XCLocalSwiftPackageReference "unxip" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = unxip;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9C3986832AFDFA1400ECC52C /* libunxip */ = {
+		9C34666F2B3EFE40004ABD14 /* libunxip */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9C3986822AFDFA1400ECC52C /* XCRemoteSwiftPackageReference "unxip" */;
 			productName = libunxip;
 		};
 /* End XCSwiftPackageProductDependency section */
