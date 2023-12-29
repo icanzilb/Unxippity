@@ -8,7 +8,7 @@ Build and run the Xcode project, for more details read: http://trycombine.com/po
 
 ## Credits
 
-MIT License, Marin Todorov (2023)
+LGPL 3 , Marin Todorov (2023)
 
 [@icanzilb on Mastodon](https://mastodon.social/@icanzilb)
 
