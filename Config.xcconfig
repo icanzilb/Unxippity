@@ -1,0 +1,2 @@
+// Enable this for UI TESTING code paths
+// OTHER_SWIFT_FLAGS = -D UITESTING
