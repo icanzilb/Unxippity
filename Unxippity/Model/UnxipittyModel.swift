@@ -120,15 +120,12 @@ class UnxipittyModel: ObservableObject {
 
         let bytesPercentDelta = Int(totalCompressedBytes / 100.0)
 
-        let reader = DataReader.data(
-            readingFrom: handle.fileDescriptor, 
-            rootURL: containerDirectoryURL,
-            streamingDelegate: { bytes += $0 }
-        )
-        var iterator = reader.makeAsyncIterator()
-
-        let fileSource = AsyncThrowingStream {
-            try await iterator.next()
+        let reader = DataReader.data(readingFrom: handle.fileDescriptor)
+        let (fileSource, bytesUpdate) = reader.lockstepSplit()
+        Task {
+            for try await data in bytesUpdate {
+                bytes += data.count
+            }
         }
 
         let dryRun = false
@@ -138,7 +135,6 @@ class UnxipittyModel: ObservableObject {
             from: .xip(wrapping: fileSource),
             to: .disk,
             input: DataReader(data: fileSource), 
-            rootURL: containerDirectoryURL,
             nil,
             nil,
             .init(compress: compress, dryRun: dryRun)

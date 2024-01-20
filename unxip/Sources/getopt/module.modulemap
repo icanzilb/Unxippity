@@ -1,4 +1,0 @@
-module getopt [system] {
-	header "getopt.h"
-	export *
-}
