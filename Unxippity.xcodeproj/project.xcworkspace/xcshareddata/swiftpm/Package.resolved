@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "unxip",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/saagarjha/unxip.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3169e60aabe2d4b7fbadb9a3670e9ab6946aeef4"
+      }
+    }
+  ],
+  "version" : 2
+}

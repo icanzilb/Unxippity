@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4983FC432B5B5D95003AB11E /* libunxip in Frameworks */ = {isa = PBXBuildFile; productRef = 4983FC422B5B5D95003AB11E /* libunxip */; };
+		4983FC452B5B5D95003AB11E /* unxip in Frameworks */ = {isa = PBXBuildFile; productRef = 4983FC442B5B5D95003AB11E /* unxip */; };
 		9C21884A2AFEB5F3000398A6 /* UnxipittyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2188492AFEB5F3000398A6 /* UnxipittyModel.swift */; };
 		9C21884C2AFEB68C000398A6 /* FileUtilitites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21884B2AFEB68C000398A6 /* FileUtilitites.swift */; };
 		9C21884E2AFEB781000398A6 /* IconPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21884D2AFEB781000398A6 /* IconPreview.swift */; };
@@ -46,7 +48,6 @@
 		9CC4619C2AFF9FA100A073A6 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		9CC4619E2AFFC3EE00A073A6 /* UnarchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnarchiveView.swift; sourceTree = "<group>"; };
 		9CC461A02AFFD2F100A073A6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		9CCE441F2AFE489F00FDC3D7 /* unxip */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = unxip; sourceTree = "<group>"; };
 		9CE9CA4A2B0138BD00D477AF /* DestinationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationButton.swift; sourceTree = "<group>"; };
 		9CE9CA4C2B0138D300D477AF /* DestinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationModel.swift; sourceTree = "<group>"; };
 		9CFE2FF42AFFECB000FBFA62 /* PostUnarchiveOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUnarchiveOptionsView.swift; sourceTree = "<group>"; };
@@ -57,7 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4983FC452B5B5D95003AB11E /* unxip in Frameworks */,
 				9C3466702B3EFE40004ABD14 /* libunxip in Frameworks */,
+				4983FC432B5B5D95003AB11E /* libunxip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,11 +96,11 @@
 			isa = PBXGroup;
 			children = (
 				9CC461A02AFFD2F100A073A6 /* Config.xcconfig */,
-				9CCE441F2AFE489F00FDC3D7 /* unxip */,
 				9C8503902AFDF46C003E5DD5 /* Unxippity */,
 				9C85038F2AFDF46C003E5DD5 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		9C85038F2AFDF46C003E5DD5 /* Products */ = {
 			isa = PBXGroup;
@@ -158,6 +161,8 @@
 			name = Unxippity;
 			packageProductDependencies = (
 				9C34666F2B3EFE40004ABD14 /* libunxip */,
+				4983FC422B5B5D95003AB11E /* libunxip */,
+				4983FC442B5B5D95003AB11E /* unxip */,
 			);
 			productName = Unxippity;
 			productReference = 9C85038E2AFDF46C003E5DD5 /* Unxippity.app */;
@@ -188,7 +193,7 @@
 			);
 			mainGroup = 9C8503852AFDF46C003E5DD5;
 			packageReferences = (
-				9C34666E2B3EFE40004ABD14 /* XCLocalSwiftPackageReference "unxip" */,
+				4983FC412B5B5D95003AB11E /* XCRemoteSwiftPackageReference "unxip" */,
 			);
 			productRefGroup = 9C85038F2AFDF46C003E5DD5 /* Products */;
 			projectDirPath = "";
@@ -443,14 +448,28 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		9C34666E2B3EFE40004ABD14 /* XCLocalSwiftPackageReference "unxip" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = unxip;
+/* Begin XCRemoteSwiftPackageReference section */
+		4983FC412B5B5D95003AB11E /* XCRemoteSwiftPackageReference "unxip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/saagarjha/unxip.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4983FC422B5B5D95003AB11E /* libunxip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4983FC412B5B5D95003AB11E /* XCRemoteSwiftPackageReference "unxip" */;
+			productName = libunxip;
+		};
+		4983FC442B5B5D95003AB11E /* unxip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4983FC412B5B5D95003AB11E /* XCRemoteSwiftPackageReference "unxip" */;
+			productName = unxip;
+		};
 		9C34666F2B3EFE40004ABD14 /* libunxip */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = libunxip;
